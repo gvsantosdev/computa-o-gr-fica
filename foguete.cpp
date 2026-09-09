@@ -53,8 +53,8 @@ void DesenhaFoguete(void)
         0.0, 1.0, 0.0     // cima
     );*/
     glLoadIdentity();
-    glRotatef(angle, 0.0f, 0.0f, 99.0f);
-    glTranslatef(-4.0f, -4.5f, -10.0f);
+    glRotatef(angle, 0.0f, 0.0f, 0.0f);
+    glTranslatef(-4.0f, -4.5f, -12.0f);
     Bico();
     Corpo();
     asaEsquerda();
@@ -120,7 +120,7 @@ void display2() {
 }
 
 void update(int value) {
-    angle += 1.0f;
+    angle += 0.2f;
     glutPostRedisplay();
     glutTimerFunc(16, update, 0); // ~60 fps
 }
